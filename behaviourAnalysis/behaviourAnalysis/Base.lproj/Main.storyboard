@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jRP-Wq-bbG">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="behaviourAnalysis" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wDg-aW-gM0">
+                                <rect key="frame" x="156" y="248.5" width="62" height="30"/>
+                                <state key="normal" title="创建表格"/>
+                                <connections>
+                                    <action selector="createTable:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ujv-wb-TBi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIi-N9-YUR">
+                                <rect key="frame" x="141" y="318.5" width="92" height="30"/>
+                                <state key="normal" title="插入一条数据"/>
+                                <connections>
+                                    <action selector="insertData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fth-K5-Lzw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="omM-Zj-BK6">
+                                <rect key="frame" x="141" y="388.5" width="92" height="30"/>
+                                <state key="normal" title="删除所有数据"/>
+                                <connections>
+                                    <action selector="deleteAllData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wcv-WE-VSw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SCG-qp-mqY">
+                                <rect key="frame" x="156" y="458.5" width="62" height="30"/>
+                                <state key="normal" title="获取数据"/>
+                                <connections>
+                                    <action selector="getAllData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ggo-bL-KtU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="omM-Zj-BK6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="36x-32-fPm"/>
+                            <constraint firstItem="CIi-N9-YUR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="48r-eD-Edp"/>
+                            <constraint firstItem="CIi-N9-YUR" firstAttribute="top" secondItem="wDg-aW-gM0" secondAttribute="bottom" constant="40" id="EZ7-KC-7q3"/>
+                            <constraint firstItem="CIi-N9-YUR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HNt-8C-GX4"/>
+                            <constraint firstItem="wDg-aW-gM0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VEv-bf-9dw"/>
+                            <constraint firstItem="SCG-qp-mqY" firstAttribute="top" secondItem="omM-Zj-BK6" secondAttribute="bottom" constant="40" id="dI5-oy-dCG"/>
+                            <constraint firstItem="SCG-qp-mqY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eSM-sd-k04"/>
+                            <constraint firstItem="omM-Zj-BK6" firstAttribute="top" secondItem="CIi-N9-YUR" secondAttribute="bottom" constant="40" id="lW6-LP-UM5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="IYI-6B-1Yd">
+                        <barButtonItem key="rightBarButtonItem" title="下一页" id="Trg-vI-dlr">
+                            <connections>
+                                <action selector="nextPage:" destination="BYZ-38-t0r" id="8by-I1-IiA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="972" y="37.331334332833585"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="egF-0O-uR8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jRP-Wq-bbG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tyM-YE-pYi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="MlC-jv-ZNF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FsR-bZ-tFb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="168.80000000000001" y="-645.42728635682158"/>
+        </scene>
+    </scenes>
+</document>
